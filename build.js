@@ -13,7 +13,7 @@ function generateNameFromUrl(url) {
 
 (async () => {
     const path = require('path')
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: 'new' });
     const page = await browser.newPage();
     await page.setViewport({
         width: 2560,
