@@ -5,7 +5,7 @@ on:
    branches: [master]
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 5 * * *'
 
 env:
   GIT_USER: lfkdsk # change to yourself
@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: secrets
     steps:
+    - uses: RisingInIris2017/cjk-fonts-action@v1  
     - name: Checkout build.js
       uses: actions/checkout@v3
     - name: Checkout daily repo
