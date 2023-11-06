@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: secrets
     steps:
-    - uses: RisingInIris2017/cjk-fonts-action@v1  
+    - uses: hms5232/install-CNS11643-fonts-action@v1
     - name: Checkout build.js
       uses: actions/checkout@v3
     - name: Checkout daily repo
