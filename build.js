@@ -4,9 +4,6 @@ const fs = require('fs');
 function generateNameFromUrl(url) {
     // Replace useless chareacters with UNDERSCORE
     uniqueName = url.replace("://", "_").replace(".", "_").replace("/", "_");
-    // Replace last UNDERSCORE with a DOT
-    uniqueName = uniqueName.substring(0, uniqueName.lastIndexOf('_'))
-        + "." + uniqueName.substring(uniqueName.lastIndexOf('_') + 1, uniqueName.length);
     return uniqueName;
 }
 
