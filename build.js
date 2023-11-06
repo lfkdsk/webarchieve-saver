@@ -3,7 +3,7 @@ const fs = require('fs');
 
 function generateNameFromUrl(url) {
     // Replace useless chareacters with UNDERSCORE
-    uniqueName = url.replace("://", "_").replace(".", "_").replace("/", "_");
+    uniqueName = url.replaceAll("://", "_").replaceAll(".", "_").replaceAll("/", "_");
     return uniqueName;
 }
 
