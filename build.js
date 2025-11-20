@@ -29,10 +29,12 @@ function generateNameFromUrl(url) {
         const newName = generateNameFromUrl(i);
         await page.screenshot({ path: path.resolve(newName + '.png'), fullPage: true});
         await page.waitForTimeout(2000);
+        console.log(i)
         await page.goto(
             'https://web.archive.org/save/',
             { waitUntil: 'domcontentloaded' }
         );
+        await page.waitForTimeout(5000);
         await page.focus("#web-save-url-input");
         await page.keyboard.type(i);
         await page.click("input[value='SAVE PAGE']");
